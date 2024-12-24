@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Hero from "../../components/hero/Hero";
 import DigitalMastery from "../../components/digitalMastery/DigitalMastery";
-import Services from "../../components/services/Services";
-import Features from "../../components/features/Features";
+import Services from "../../components/services/ServicesSection";
+import Features from "../../components/features/FeaturesSection";
 import Enquiries from "../../components/enquiries/Enquiries";
 import PeaceOfMind from "../../components/peaceOfMind/PeaceOfMind";
 import Testimonial from "../../components/testimonial/Testimonial";
@@ -19,7 +19,7 @@ const Home = () => {
       <DigitalMastery />
       <Services />
       <Features />
-      <Enquiries /> // there will be inq convo card inside this
+      <Enquiries /> 
       <PeaceOfMind />
       <Testimonial />
       <Faq />

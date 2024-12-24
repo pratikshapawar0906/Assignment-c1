@@ -8,3 +8,4 @@ export default defineConfig({
     target: 'esnext',  // Ensure ESNext targets modern environments
   },
 });
+
