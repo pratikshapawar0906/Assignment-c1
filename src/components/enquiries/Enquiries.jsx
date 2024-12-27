@@ -43,11 +43,11 @@ const Enquiries = () => {
                </div>
             </div>
             <div className="col-md-12 d-flex  my-4 px-3" style={{justifyContent:'space-between'}}  >
-              <div className="col-md-4">
+              <div className="col-md-4" style={{animation:' slideInLeft 1s ease-in-out' }}>
                  <img src="../Images/bro.png"  className="img-fluid"/>
               </div>
               <div className="col-md-6">
-                 <div className="frame-296">
+                 <div className="frame-296" style={{animation:' slideInRight 1s ease-in-out' }}>
                    <h2 className="H400-bold">Optimized Path to Property Purchase</h2>
                     <p className="Body500-RG">
                       In the dynamic realm of real estate, the journey from a property inquiry to a successful conversion demands a well-crafted approach. At Osumare, we specialize in guiding potential buyers through this journey seamlessly, maximizing inquiries-turned-conversions with expert strategies.

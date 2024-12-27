@@ -1,4 +1,5 @@
 import React from "react";
+import Faq from "../faq/Faq";
 
 const PeaceOfMind = () => {
   return (
@@ -19,6 +20,7 @@ const PeaceOfMind = () => {
                   </div>
               </div>
           </div>
+          <Faq />
     </>
   )
 };

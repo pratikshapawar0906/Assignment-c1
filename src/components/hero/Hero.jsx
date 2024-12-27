@@ -6,9 +6,9 @@ const Hero = () => {
     <>
       <div className="container-fluid" style={{width:'1435px', height:'1024px'}}>
         <div className="img ">
-            <div className="Frame-3">
-               <p className="fs">Elevate <span>Real Estate Success</span> with osumare's Digital Expertise</p>
-               <p>Tailored Solution for thriving in the Digital Real Estate Landscape</p>
+            <div className="Frame-3 animated-frame">
+               <p className="fs animated-title">Elevate <span>Real Estate Success</span> with osumare's Digital Expertise</p>
+               <p className="animated-subtitle">Tailored Solution for thriving in the Digital Real Estate Landscape</p>
                <button className="get-started">Get Started</button>
             </div>\
             <div className="Elipse-190">

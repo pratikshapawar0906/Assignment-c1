@@ -3,7 +3,7 @@ import React from "react";
 const ContactForm = () => {
   return (
     <>
-    <div className="container-fluid" id="form-section" style={{width:'1440px', height:'900px'}}>
+    <div className="container-fluid" id="Contact" style={{width:'1440px', height:'900px', marginTop:'30px'}}>
         <div className="col-md-12">
             <div className="row">
               <div className="Frame-878">
