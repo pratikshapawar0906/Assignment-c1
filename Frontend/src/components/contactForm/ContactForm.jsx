@@ -2,30 +2,44 @@ import React, { useState } from "react";
 import Axios from 'axios'
 
 const ContactForm = () => {
-  const [data, setdata] = useState({username: '',useremail: '',userphone:'',message:''});
+  const [Contact, setContact] = useState({username: '',useremail: '',userphone:'',message:''});
   
    // ******************************************
-   const [errors, setErrors] = useState({});
-
-   const dataHandler = (e) => {
-       const { name, value} = e.target;
-
-         setdata({ ...data, [name]: value });
-
- };
+   
+   const ContactHandler = (e) => {
+    const { name, value } = e.target;
+    // console.log(name, value);
+    const coypContactInfo = ({ ...Contact, [name]: value });
+    setSignUpData(coypContactInfo)
+  };
 
 
  // *******************************************
  const saveForm = async(e) => {
    e.preventDefault();
-
     
-       alert('Form submitted successfully!');
-       console.log(data);
-       setdata({username: '',useremail: '',userphone:'',message:''});
-       setErrors({});
-   
-   await Axios.post('http://localhost:3000/customer',data)
+   const { name, email, phone, message}=signUpData
+      if(!name || !email || !phone || !message){
+           return handleError('Name , email,phone and message are required ')
+      }
+      try{
+         const url="http://localhost:7000/user/contact"
+         const responsive = await fetch(url,{
+           method:"POST",
+           headers: {
+             "Content-Type": "application/json"
+         },
+         body: JSON.stringify({ name, email,phone, message  })
+         })
+         const result=await Response.json()
+         console.log(result)
+      }catch(error){
+       handleError(error)
+      }
+    
+      
+
+
  };
 
   return (
@@ -48,17 +62,17 @@ const ContactForm = () => {
                     <div className="form-row1">
                       <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input type="text" name="username" placeholder="Enter your name" value={data.username} onChange={(e)=>dataHandler(e)} required />
+                        <input type="text" name="username" placeholder="Enter your name" value={Contact.username} onChange={(e)=>ContactHandler(e)} required />
                       </div>
         
                       <div className="form-group">
                         <label htmlFor="phone">Phone</label>
-                        <input type="text" name="userphone" placeholder="Enter your Number" value={data.userphone} onChange={(e)=>dataHandler(e)} required/>
+                        <input type="text" name="userphone" placeholder="Enter your Number" value={Contact.userphone} onChange={(e)=>ContactHandler(e)} required/>
                       </div>
         
                       <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input type="email" name="useremail" placeholder="Enter your Email" value={data.useremail} onChange={(e)=>dataHandler(e)} required/>
+                        <input type="email" name="useremail" placeholder="Enter your Email" value={Contact.useremail} onChange={(e)=>ContactHandler(e)} required/>
                       </div>
                     </div>
         
@@ -66,7 +80,7 @@ const ContactForm = () => {
                     <div className="form-row">
                       <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" placeholder="Enter your Message" rows="8" value={data.message} onChange={(e)=>dataHandler(e)} required></textarea>
+                        <textarea name="message" placeholder="Enter your Message" rows="8" value={Contact.message} onChange={(e)=>ContactHandler(e)} required></textarea>
                       </div>
                     </div>
                   </div>
