@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Axios from 'axios'
+import { handleError } from "../../util";
+import { ToastContainer } from "react-toastify";
 
 const ContactForm = () => {
   const [Contact, setContact] = useState({username: '',useremail: '',userphone:'',message:''});
@@ -10,7 +12,7 @@ const ContactForm = () => {
     const { name, value } = e.target;
     // console.log(name, value);
     const coypContactInfo = ({ ...Contact, [name]: value });
-    setSignUpData(coypContactInfo)
+    setContact(coypContactInfo)
   };
 
 
@@ -18,21 +20,26 @@ const ContactForm = () => {
  const saveForm = async(e) => {
    e.preventDefault();
     
-   const { name, email, phone, message}=signUpData
-      if(!name || !email || !phone || !message){
+   const { username, useremail, userphone, message}= Contact
+
+      if(!username || !useremail || !userphone || !message){
            return handleError('Name , email,phone and message are required ')
       }
       try{
          const url="http://localhost:7000/user/contact"
-         const responsive = await fetch(url,{
+         const response = await fetch(url,{
            method:"POST",
            headers: {
              "Content-Type": "application/json"
          },
-         body: JSON.stringify({ name, email,phone, message  })
+         body: JSON.stringify({  name: username, email: useremail, phone: userphone, message   })
          })
-         const result=await Response.json()
-         console.log(result)
+         const result=await response.json()
+         const { success, message}=result
+
+          if (success) {
+             handleSuccess(message);
+          }
       }catch(error){
        handleError(error)
       }
@@ -56,7 +63,7 @@ const ContactForm = () => {
                   </p>
                 </div>
   
-                <form className="contact-form" onSubmit={(e)=>saveForm(e)} >
+                <form className="contact-form" onSubmit={saveForm} >
                   <div className="form1">
                     {/* Left Column */}
                     <div className="form-row1">
@@ -90,7 +97,7 @@ const ContactForm = () => {
                     Get started
                   </button>
                  </form>
-  
+               <ToastContainer/>
               </div>
             </div>
         </div>

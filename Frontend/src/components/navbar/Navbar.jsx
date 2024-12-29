@@ -1,11 +1,39 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import { handleSuccess } from "../../util";
 
 const Navbar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState("");
+
+
+  const navigate=useNavigate()
+  // Check if the user is logged in (you can replace this with actual logic)
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("loggedInuser",true) // Example check
+    setIsLoggedIn(loggedIn);
+  }, []);
+
+  // Handle Logout functionality
+  const handleLogout = () => {
+    localStorage.removeItem("Token");  
+    localStorage.removeItem("loggedInuser"); 
+    handleSuccess("user logged out") 
+    setTimeout(()=>{
+      navigate('/login');   // Redirect to login page
+    },1000)
+    setIsLoggedIn(false);  // Update state
+        
+  };
+
+  // useEffect(()=>{
+  //   fet
+  // },[])
   return (
+    
     <>
-       <nav className="navbar navbar-expand-lg bg-light sticky-top shadow-sm animated-navbar "  >
-          <div className="container-fluid header " >
+       <nav className="navbar navbar-expand-lg bg-light sticky-top shadow-sm animated-navbar " style={{width:'1520px'}} >
+          <div className="container-fluid header w-100" >
              <div className="col-md-12 w-100 nav-nav  ">
                   <div className=" col-md-2">
                      <img src='../images/Brand-logo.png' alt="Brandlogo"  className="logo" height={150} width={172}/>
@@ -38,12 +66,23 @@ const Navbar = () => {
                           <li className="nav-item mx-3">
                             <NavLink to="/career" className="nav-link">  Career</NavLink>
                           </li>
-                          <li className="nav-item mx-3">
-                            <NavLink to="/login" className="nav-link"> Login</NavLink>
-                          </li>
-                          <li className="nav-item mx-3">
-                            <NavLink to="/signup" className="nav-link">signup</NavLink>
-                          </li>
+                          {/* Conditionally show Login/Signup or Logout */}
+                          {!isLoggedIn ? (
+                            <>
+                              <li className="nav-item mx-3">
+                                <NavLink to="/login" className="nav-link">Login</NavLink>
+                              </li>
+                              <li className="nav-item mx-3">
+                                <NavLink to="/signup" className="nav-link">Signup</NavLink>
+                              </li>
+                            </>
+                          ) : (
+                            <li className="nav-item mx-3">
+                              <button onClick={handleLogout} className="nav-link" style={{ background: 'none', border: 'none', color: '#007bff', cursor: 'pointer' }}>
+                                Logout
+                              </button>
+                            </li>
+                          )}
                         </ul>
                      </div>
                   </div>
@@ -53,6 +92,7 @@ const Navbar = () => {
                 </div>
              </div>
           </div>
+          < ToastContainer />
        </nav>
     </>
   )
