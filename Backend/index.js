@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 // Middleware
 app.use(bodyParser.json())
 app.use(cors())
+
 // Serve static files from the 'public' folder
 app.use(express.static('public'));
 
