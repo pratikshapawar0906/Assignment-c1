@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from 'axios'
 import { handleError } from "../../util";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer , toast } from "react-toastify";
 
 const ContactForm = () => {
   const [Contact, setContact] = useState({username: '',useremail: '',userphone:'',message:''});
