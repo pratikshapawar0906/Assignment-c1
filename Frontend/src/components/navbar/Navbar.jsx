@@ -4,31 +4,27 @@ import { ToastContainer } from "react-toastify";
 import { handleSuccess } from "../../util";
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState("");
+  // State to track if user is logged in
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-
-  const navigate=useNavigate()
-  // Check if the user is logged in (you can replace this with actual logic)
+  // Check if user is logged in (i.e., if there's a JWT token in localStorage)
   useEffect(() => {
-    const loggedIn = localStorage.getItem("loggedInuser",true) // Example check
-    setIsLoggedIn(loggedIn);
-  }, []);
+    const token = localStorage.getItem("Token");
+    if (token) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, []);  // Run only once when the component mounts
 
-  // Handle Logout functionality
   const handleLogout = () => {
-    localStorage.removeItem("Token");  
-    localStorage.removeItem("loggedInuser"); 
-    handleSuccess("user logged out") 
-    setTimeout(()=>{
-      navigate('/login');   // Redirect to login page
-    },1000)
-    setIsLoggedIn(false);  // Update state
-        
+    // Clear user data from localStorage
+    localStorage.removeItem("Token");
+    localStorage.removeItem("loggedInuser");
+    setIsLoggedIn(false);  // Update the state to reflect the user is logged out
   };
 
-  // useEffect(()=>{
-  //   fet
-  // },[])
+  
   return (
     
     <>

@@ -56,7 +56,7 @@ const Login = () => {
           console.log(result);
         } catch (error) {
     
-          handleError("An error occurred while signing up. Please try again.");
+          handleError("An error occurred while loging up. Please try again.");
           console.error(error);
         }
   };
