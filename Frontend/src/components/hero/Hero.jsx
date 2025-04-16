@@ -15,7 +15,7 @@ const Hero = () => {
               
             </div>
             <div className="header-img">
-                <img src="../images/Header-image.png" className="img-fluid"/>
+                <img src="../images/Header-image.png"  loading="lazy" className="img-fluid"/>
             </div>
         </div>
       </div>

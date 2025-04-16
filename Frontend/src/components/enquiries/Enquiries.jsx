@@ -45,7 +45,7 @@ const Enquiries = () => {
 
             <div className="col-md-12 d-flex  my-4 px-3" style={{justifyContent:'space-between'}}  >
               <div className="col-md-4" style={{animation:' slideInLeft 1s ease-in-out' }}>
-                 <img src="../Images/bro.png"  className="img-fluid"/>
+                 <img src="../Images/bro.png" loading="lazy"  className="img-fluid"/>
               </div>
               <div className="col-md-6">
                  <div className="frame-296" style={{animation:' slideInRight 1s ease-in-out' }}>

@@ -1256,3 +1256,46 @@ i{
   margin-top: 1rem;
   color: #666;
 }
+
+@media (max-width: 375px) {
+  /* Adjust font sizes for better readability */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Ensure buttons are easily tappable */
+  .cta-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* Adjust container padding */
+  .container {
+    padding: 10px;
+  }
+
+  /* Stack columns vertically */
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Ensure images scale appropriately */
+  .image-section img {
+    width: 100%;
+    height: auto;
+  }
+}

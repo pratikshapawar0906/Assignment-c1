@@ -5,7 +5,7 @@ const featureCard = (props) => {
     <>
       <div className="feature-card d-flex align-items-center justify-content-center"  >
            <div className="feature-logo">
-             <img src={props.img} height={24} width={24}  />
+             <img src={props.img} height={24} loading="lazy" width={24}  />
            </div>
           <div className="frame-9">
              <h3>{props.featureCard}</h3>

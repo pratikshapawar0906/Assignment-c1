@@ -9,7 +9,7 @@ const Footer = () => {
                 {/* Left Section */}
                 <div className="footer-left">
                     <div className="Frame-253">
-                      <img src="../Images/Brand-logo.png" alt='logo' width={132} height={100} />
+                      <img src="../Images/Brand-logo.png" alt='logo'loading="lazy" width={132} height={100} />
                       <p className="Body300-Rg">
                         The best digital marketing agency in Pune with a proven track record of consistently delivering quality service.
                       </p>

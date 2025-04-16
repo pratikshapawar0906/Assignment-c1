@@ -32,7 +32,7 @@ const Navbar = () => {
           <div className="container-fluid header w-100" >
              <div className="col-md-12 w-100 nav-nav  ">
                   <div className=" col-md-2">
-                     <img src='../images/Brand-logo.png' alt="Brandlogo"  className="logo" height={150} width={172}/>
+                     <img src='../images/Brand-logo.png' alt="Brandlogo" loading="lazy" className="logo" height={150} width={172}/>
                   </div>
                   <div className="col-md-8">
                      <button  className="navbar-toggler"  type="button"  data-bs-toggle="collapse"  data-bs-target="#navbarNav"  aria-controls="navbarNav"  aria-expanded="false"  aria-label="Toggle navigation">

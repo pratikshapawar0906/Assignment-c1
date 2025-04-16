@@ -41,15 +41,15 @@ const Testimonial = () => {
 
       <div className="testimonial-card">
         <div className="image-container">
-          <img src={image} alt="Testimonial" className="testimonial-image" />
+          <img src={image} alt="Testimonial"  loading="lazy" className="testimonial-image" />
           <div className="play-button">▶</div>
         </div>
 
         <div className="testimonial-content">
           <p className="author">
-            <img src={image} alt={author} className="author-img" />
+            <img src={image} alt={author} loading="lazy" className="author-img" />
             <span className="author-name">{author}</span>
-            <img src={symbol} alt="symbol" className="symbol" />
+            <img src={symbol} alt="symbol" loading="lazy" className="symbol" />
           </p>
           <p className="Body500-RG">{text}</p>
         </div>
