@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="container-fluid" id="footer" style={{width:'1280px',height:'713px'}} >
+    <div className="container-fluid" id="footer" style={{height:'713px'}} >
         <div className="col-md-12">
             <div className="row">
               <div className="footer-container p-5">

@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
+import Header from '../../../Images/Header-image.png';
 
 const Hero = () => {
   return (
     <>
-      <div className="container-fluid" style={{width:'1435px', height:'1024px'}}>
+      <div className="container-fluid" style={{ height:'1024px'}}>
         <div className="img ">
             <div className="Frame-3 animated-frame">
                <p className="fs animated-title">Elevate <span>Real Estate Success</span> with osumare's Digital Expertise</p>
@@ -15,7 +15,7 @@ const Hero = () => {
               
             </div>
             <div className="header-img">
-                <img src="../images/Header-image.png"  loading="lazy" className="img-fluid"/>
+                <img src={Header} loading="lazy" className="img-fluid"/>
             </div>
         </div>
       </div>

@@ -1,26 +1,31 @@
 import React, { useState } from "react";
+import TabishPhoto from  "../../../Images/TabishPhoto.png"
+import AyeshaPhoto from  "../../../Images/AyeshaPhoto.png"
+import RahulPhoto from  "../../../Images/RahulPhoto.png"
+import Symbol from  "../../../Images/symbol.png"
+
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
     {
-      image: "../Images/TabishPhoto.png",
+      image: TabishPhoto,
       author: "Tabish Khan",
       text: "Osumare's expertise in pharma marketing is unparalleled. Their strategies helped us navigate complex regulations while driving remarkable growth.",
-      symbol: "../Images/symbol.png",
+      symbol: Symbol,
     },
     {
-      image: "../Images/AyeshaPhoto.png",
+      image: AyeshaPhoto,
       author: "Ayesha Malik",
       text: "The team at Osumare truly understands the pharma sector. Their customized marketing solutions have elevated our brand's digital presence.",
-      symbol: "../Images/symbol.png",
+      symbol: Symbol,
     },
     {
-      image: "../Images/RahulPhoto.png",
+      image: RahulPhoto,
       author: "Rahul Mehta",
       text: "Exceptional insights and strategic planning by Osumare have significantly improved our online visibility in the competitive pharma market.",
-      symbol: "../Images/symbol.png",
+      symbol: Symbol,
     },
   ];
 
@@ -35,7 +40,7 @@ const Testimonial = () => {
   const { image, author, text, symbol } = testimonials[currentIndex];
 
   return (
-    <div className="pharma-container" id="testimonials" style={{ width: "1440px" }}>
+    <div className="pharma-container" id="testimonials" >
       <h2 className="pharma-title">What Our Pharma Partners Say</h2>
       <p className="pharma-subtitle">Driving Transformations, One Brand at a Time</p>
 

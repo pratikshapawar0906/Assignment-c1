@@ -8,7 +8,7 @@ const ServiceItem = (props) => {
            <div className="service-logo">
              <img src={props.img} height={24} loading="lazy" width={24}  />
            </div>
-           <h3>{props.serviceCard}</h3>
+           <h3 className='H200-bold'>{props.serviceCard}</h3>
         </div>
         <p className="Body-300" >
           {props.ServiceInfo}

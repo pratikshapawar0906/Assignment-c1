@@ -24,7 +24,7 @@ const Faq = () => {
   return (
     <>
 
-       <div className="container-fluid" id="faq-section" style={{width:'1440px'}}>
+       <div className="container-fluid" id="faq-section" >
             <div className="col-md-12">
                <div className="row">
                   <div className="Frame-878">

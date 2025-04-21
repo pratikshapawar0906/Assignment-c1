@@ -5,19 +5,13 @@
 }
 /* Navbar section */
 
-.header{
-    padding: 8px 80px 0 80px;
-    color:rgba(255,255,255,0.64);
-}
 
-.navbar{
-  width: 1440px;
-}
+
 .contact-us{   
     border-radius:20px ;
     color:  #000C1A;
-    padding: 10px 10px;
-    border: 1px solid  #000C1A;
+    padding: 10px 24px 10px 24px;
+    border: 1px solid  rgba(0, 12, 26, 1);
     width: 216px;
     Height:44px;
     text-align: center;
@@ -108,6 +102,8 @@
     font-size: 16px;
     line-height: 24px;
     font-family: Inter;
+    width:168px;
+    height: 24px;
 }
 
 .nav-nav{
@@ -150,7 +146,7 @@
     height: 284px ;
     width: 899px;
     position: relative;
-    top: 200px;
+    top: 291.5px;
     left: 271px;
     gap:32px;
     animation: slideInUp 1.5s ease-in-out; /* Added animation */
@@ -175,8 +171,8 @@
     Width:796px;
     Height:538px;
     position: relative;
-    top: 291.5px;
-    left: 400px;
+    top: 450px;
+    left: 322px;
     animation: zoomIn 2s ease-in-out; 
 }
 
@@ -279,12 +275,18 @@
 }
 
 .header2{
-  font-size: 32px;
-  font-family:  Montserrat;
-  font-weight: 700;
-  line-height: 48px;
-  color:#000C1A ;
+  
+  position: absolute;
+  left: 501px;
   text-align: center;
+  color: rgba(0, 12, 26, 1);
+}
+.Cuate{
+  height: 342px;
+  width: 507.12px;
+  position: relative;
+  top:100px ;
+  left: 80px;
 }
 .Digital-Info{
   font-size: 24px;
@@ -293,6 +295,7 @@
   Height:385px;
   margin-top: 100px;
   float: right;
+  Gap:32px;
   animation: slideInRight 1.5s ease-in-out;
 
   span{
@@ -369,14 +372,16 @@
 /* Service container */
 #service{
     padding: 91px 81px;
-    color:#F9F9F9;
+    color:rgba(249,249,249,1);
     justify-items: center;
     align-items: center;
-    height: auto;
+   
+    Gap:10px;
 }
 .fill{
     display: flex;
     justify-content: center;
+    Gap:68px;
 }
 
 .header-service{
@@ -384,14 +389,7 @@
   color: #000C1A;
   text-align: center;
 
-  p{
-    font-size: 24px;
-    font-family:  open sans;
-    font-weight: 400;
-    line-height: 36px;
-    text-align: center;
-    color: #333333;
-  }
+  
 }
 
 .H400-bold{
@@ -407,7 +405,9 @@
 .services-item{
   padding: 32px 16px;
   height: 239px;
-  box-shadow: -3px 4px 16px 0px #0000000A  ;
+  width: 297px;
+  Gap:16px;
+  box-shadow: -3px 4px 16px 0px rgba(0,0,0,0.04) ;
 }
 
 .service-card{
@@ -421,14 +421,14 @@
     font-family:  Montserrat;
     font-weight: 700 ;
     line-height: 22.5px;
-    color: #000C1A;
+    color: rgba(0,12,26,1);
 }
 .Body-300{
     font-size: 14px;
     font-family:  open sans;
     font-weight: 400;
     line-height:19.07px;
-    color: #333333;
+    color: rgba(51, 51, 51, 1);
     text-align: center;
   
 }
@@ -519,7 +519,7 @@
     font-family:  open sans;
     font-weight: 400;
     line-height:36px;
-    color: #333333;   
+    color: rgba(51,51, 51, 1);   
 }
 
 
@@ -615,7 +615,7 @@
 
 .blue{
     border-radius: 50%;
-    background-color:#409AFF;
+    background-color:rgba(64, 154, 255, 1);
     Width:300px !important;
     Height:300px;
     opacity: 0.24;
@@ -623,7 +623,7 @@
 }
 .pink{
     border-radius: 50%;
-    background-color:#FF725E;
+    background-color:rgba(255, 114, 94, 1);
     Width:300px !important;
     Height:300px;
     opacity:0.24;
@@ -961,7 +961,7 @@
   
   font-family: Arial, sans-serif;
   position: relative;
-  top: 200px;
+  top: 400px;
   margin: 0px 80px 12px 80px ;
 }
 

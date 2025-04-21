@@ -4,7 +4,7 @@ import Faq from "../faq/Faq";
 const PeaceOfMind = () => {
   return (
     <>
-          <div className="container-fluid" id="peaceofmind" style={{width:'1440px'}}>
+          <div className="container-fluid" id="peaceofmind" >
               <div className="col-md-12">
                   <div className="row  ">
                     <div className="blue"></div>

@@ -1,33 +1,37 @@
 import React from "react";
 import DriveEnq from "./DriveEnq";
 import Experties from "./Experties";
-
+import bro from "../../../Images/bro.png"
+import callaction from "../../../Images/CallAction.png"
+import LandingPage from "../../../Images/LandingPage.png"
+import SocialProof from "../../../Images/SocialProof.png"
+import MobileFriendly from "../../../Images/MobileFriendly.png"
 const Enquiries = () => {
   const data = [
     {
       id: 1,
-      img: "../Images/CallAction.png",
+      img: callaction,
       title: "Call-to-Action Optimization",
       description:
         "Our carefully crafted CTAs guide potential buyers through the property journey, enhancing engagement and conversion rates.",
     },
     {
       id: 2,
-      img: "../Images/LandingPage.png",
+      img: LandingPage,
       title: "Landing Page Efficiency",
       description:
         "Tailored landing pages are designed for maximum property lead conversion. They provide seamless user experiences and clear pathways for inquiry submission.",
     },
     {
       id: 3,
-      img: "../Images/SocialProof.png",
+      img: SocialProof,
       title: "Social Proof Utilization",
       description:
         "Leverage the power of testimonials and success stories from satisfied buyers to build trust and credibility, encouraging hesitant prospects to take action.",
     },
     {
       id: 4,
-      img: "../Images/MobileFriendly.png",
+      img: MobileFriendly,
       title: "Mobile-Friendly Experience",
       description:
         "With a responsive design approach, our strategies ensure a seamless browsing experience across all devices. This responsiveness enhances engagement and conversions by accommodating the preferences of on-the-go property seekers.",
@@ -35,7 +39,7 @@ const Enquiries = () => {
   ];
   return (
     <>
-          <div className="container-fluid " id="enquiries"  style={{width:'1440px'}}>
+          <div className="container-fluid " id="enquiries"  >
             <div className="fill">
                <div className="header-service">
                  <h2 className="H400-bold">Driving Property Inquiries to Conversions</h2>
@@ -45,7 +49,7 @@ const Enquiries = () => {
 
             <div className="col-md-12 d-flex  my-4 px-3" style={{justifyContent:'space-between'}}  >
               <div className="col-md-4" style={{animation:' slideInLeft 1s ease-in-out' }}>
-                 <img src="../Images/bro.png" loading="lazy"  className="img-fluid"/>
+                 <img src={bro} loading="lazy"  className="img-fluid"/>
               </div>
               <div className="col-md-6">
                  <div className="frame-296" style={{animation:' slideInRight 1s ease-in-out' }}>
